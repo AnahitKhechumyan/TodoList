@@ -1,0 +1,56 @@
+.App {
+  text-align: center;
+}
+ 
+.todoAppForm{
+  margin-left:30%; 
+   width: 40%;
+   display:grid;
+   grid-template-columns: 1fr auto;   
+}
+.todoAppForm > h1{
+  color:rgb(36, 36, 128);
+}
+.todoInput{
+  padding: 10px 0px;
+  border: 2px solid rgb(247, 175, 81);
+  color:rgb(99, 165, 241);
+  font-size: 30px;
+} 
+.todoAppAddButton{
+  border:0;
+  color:rgb(247, 247, 253);
+  width:50px;
+  font-size: 30px;
+  font-weight: bold;
+  cursor:pointer;
+  background-color:rgb(99, 165, 241) ;
+}
+.todoAppLabel{
+  display: flex;
+  margin-top:5px;
+  padding: 10px 0px;
+  margin-left:30%; 
+  width: 40%;
+  background-color: rgb(228, 234, 247);
+  border: 1px solid rgb(240, 243, 250);
+  color: blue;
+}
+ .check{
+   width: 20px;
+ }
+ .deleteButton{
+    border: 0;
+    color:rgb(38, 110, 243);
+    background-color: rgb(228, 234, 247);
+ }
+ .footer{
+  display: flex;
+  margin-top:5px;
+  padding: 10px 0px;
+  margin-left:30%; 
+  width: 40%;
+  background-color: rgb(228, 234, 247);
+  border: 1px solid rgb(240, 243, 250);
+  color: blue;
+ }

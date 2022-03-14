@@ -1,0 +1,27 @@
+.todoAppLabel{
+    display: inline-block;
+    margin-top:5px;
+    padding: 10px 0px;
+    margin-left:10%; 
+    width: 40%;
+    background-color: rgb(224, 233, 253);
+    border: 1px solid rgb(240, 243, 250);
+    color: blue;
+  }
+   .check{
+     width: 20px;
+   }
+    .text{
+      float:left;
+    }
+    .icon{
+        float:right;
+    }
+    .deleteButton{
+       border: 0;
+       color:rgb(38, 110, 243);
+       background-color: rgb(228, 234, 247);
+    }
+    .pen{
+        color:rgb(84, 125, 240);
+      }

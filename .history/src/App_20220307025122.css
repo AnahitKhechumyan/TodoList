@@ -1,0 +1,37 @@
+.App {
+  text-align: center;
+}
+
+.todoAppForm{
+  margin-left:30%; 
+   width: 40%;
+   display:grid;
+   grid-template-columns: 1fr auto;
+    
+}
+.todoInput{
+  padding: 10px 0px;
+  border: 1px solid rgb(247, 175, 81);
+  color:rgb(99, 165, 241);
+  font-size: 30px;
+} 
+.todoAppAddButton{
+  border:0;
+  color:rgb(247, 247, 253);
+  width:50px;
+  cursor:pointer;
+  background-color:rgb(99, 165, 241) ;
+}
+.todoAppLabel{
+  display: flex;
+  margin-top:5px;
+  padding: 10px 0px;
+  margin-left:30%; 
+  width: 40%;
+  background-color: rgb(228, 234, 247);
+  border: 1px solid rgb(240, 243, 250);
+  color: blue;
+}
+.todoAppLabel > checkbox{
+  width: 20px;
+} 

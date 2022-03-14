@@ -1,0 +1,27 @@
+.todoAppForm{
+    margin-left:30%; 
+     width: 40%;
+     display:grid;
+     grid-template-columns: 1fr auto;   
+  }
+ 
+  .todoInput{
+    padding: 10px 0px;
+    border: 2px solid rgb(247, 175, 81);
+    color:rgb(99, 165, 241);
+    font-size: 30px;
+  } 
+  .todoAppAddButton{
+    border:0;
+    color:rgb(247, 247, 253);
+    width:50px;
+    font-size: 30px;
+    font-weight: bold;
+    cursor:pointer;
+    background-color:rgb(99, 165, 241) ;
+  }
+  @media(max-width:800px){
+    .todoAppForm{
+       width: 20%;   
+    }
+ }
