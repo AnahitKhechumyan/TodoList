@@ -2,7 +2,7 @@ import React, {useEffect} from "react";
 import  TodoItem from "./TodoItem";
  
 
-function TodoList({todos, onSave, onChange, onDelete, onEdit, onAdd}){
+function TodoList({todos, setTodos, onChange, onDelete, onEdit, onAdd}){
     useEffect(()=>{
         console.log("ok")
     }, [todos]);
@@ -16,7 +16,7 @@ function TodoList({todos, onSave, onChange, onDelete, onEdit, onAdd}){
                          key={todo.id} 
                          todo={todo}
                          todos={todos}
-                         onSave={onSave}
+                         setTodos={setTodos}
                          onChange={onChange}
                          onDelete={onDelete}
                          onEdit={onEdit}

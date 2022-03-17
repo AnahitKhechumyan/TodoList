@@ -74,7 +74,7 @@ function Todo({ text, todo, setTodo, value, setValue, setEdit }) {
                 return todo;
               })
             );
-            //setEdit(null);
+            setEdit(null);
           }}
         />
         <TodoFooter

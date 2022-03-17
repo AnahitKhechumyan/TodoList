@@ -6,19 +6,26 @@ import "./TodoItem.css";
 function TodoItem({
   todo,
   todos,
-  onSave,
+  setTodos,
   onChange,
   onDelete
 }) {
   const [edit, setEdit] = useState(null);
-  const [value, setValue] = useState(todo.text);
+  const [value, setValue] = useState("");
   const focusRef = useRef();
 
   function editTodo(id) {
     setEdit(id);
   }
   function saveTodo(id) {
-    onSave( id, value);
+    setTodos(
+      todos.map((item) => {
+        if (item.id === id) {
+          item.text = value;
+        }
+        return item;
+      })
+    );
     setEdit(null);
   }
   useEffect(() => {
@@ -34,7 +41,8 @@ function TodoItem({
             type="text"
             value={value}
             onChange={(e) => {
-              setValue(e.target.value);
+              todo.text = e.target.value;
+              //setValue(e.target.value);
             }}
           />
         
@@ -63,7 +71,7 @@ function TodoItem({
               saveTodo(todo.id);
             }}
           >
-            Save
+            <FontAwesomeIcon icon={faPen} className="pen" />
           </button>
         </div>
       ) : (

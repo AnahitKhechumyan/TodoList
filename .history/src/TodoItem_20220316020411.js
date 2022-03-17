@@ -34,6 +34,7 @@ function TodoItem({
             type="text"
             value={value}
             onChange={(e) => {
+              //todo.text = e.target.value;
               setValue(e.target.value);
             }}
           />
@@ -63,7 +64,7 @@ function TodoItem({
               saveTodo(todo.id);
             }}
           >
-            Save
+            <FontAwesomeIcon icon={faPen} className="pen" />
           </button>
         </div>
       ) : (

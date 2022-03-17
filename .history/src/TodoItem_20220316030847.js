@@ -63,7 +63,7 @@ function TodoItem({
               saveTodo(todo.id);
             }}
           >
-            Save
+            <FontAwesomeIcon icon={faPen} className="pen" />
           </button>
         </div>
       ) : (

@@ -18,7 +18,14 @@ function TodoItem({
     setEdit(id);
   }
   function saveTodo(id) {
-    onSave( id, value);
+    var x=0;
+    onSave( todos.map((item) => {
+        if (item.id === id) {
+          item.text = value;
+        }
+        return item;
+      })
+    );
     setEdit(null);
   }
   useEffect(() => {
@@ -34,6 +41,7 @@ function TodoItem({
             type="text"
             value={value}
             onChange={(e) => {
+              //todo.text = e.target.value;
               setValue(e.target.value);
             }}
           />
@@ -63,7 +71,7 @@ function TodoItem({
               saveTodo(todo.id);
             }}
           >
-            Save
+            <FontAwesomeIcon icon={faPen} className="pen" />
           </button>
         </div>
       ) : (

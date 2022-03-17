@@ -59,22 +59,14 @@ function Todo({ text, todo, setTodo, value, setValue, setEdit }) {
             setValue(text);
           }}
           onSave={(id, newText) => {
-            let newTodo = [...todos].map((item) => {
+            let newTodo = [...todo].map((item) => {
               if (item.id === id) {
                 item.text = newText;
               }
               return item;
             });
-            setTodos(
-              todos.map((todo) => {
-                if (todo.id === newTodo.id) {
-                  return newTodo;
-                }
-
-                return todo;
-              })
-            );
-            //setEdit(null);
+            setTodo(newTodo);
+            setEdit(null);
           }}
         />
         <TodoFooter

@@ -65,16 +65,8 @@ function Todo({ text, todo, setTodo, value, setValue, setEdit }) {
               }
               return item;
             });
-            setTodos(
-              todos.map((todo) => {
-                if (todo.id === newTodo.id) {
-                  return newTodo;
-                }
-
-                return todo;
-              })
-            );
-            //setEdit(null);
+            setTodo(newTodo);
+            setEdit(null);
           }}
         />
         <TodoFooter

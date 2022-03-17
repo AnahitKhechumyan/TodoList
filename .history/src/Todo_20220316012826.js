@@ -4,7 +4,7 @@ import TodoList from "./TodoList";
 import TodoFooter from "./TodoFooter";
 import SearchBar from "./SearchBar";
 
-function Todo({ text, todo, setTodo, value, setValue, setEdit }) {
+function Todo({ text, todo, value, setValue, setEdit }) {
   const [todos, setTodos] = useState([]);
   const [data, setData] = useState([]);
 
@@ -58,23 +58,15 @@ function Todo({ text, todo, setTodo, value, setValue, setEdit }) {
             setEdit(text.id);
             setValue(text);
           }}
-          onSave={(id, newText) => {
-            let newTodo = [...todos].map((item) => {
+          onSave={(id) => {
+            let newTodo = [...todo].map((item) => {
               if (item.id === id) {
-                item.text = newText;
+                item.title = value;
               }
               return item;
             });
-            setTodos(
-              todos.map((todo) => {
-                if (todo.id === newTodo.id) {
-                  return newTodo;
-                }
-
-                return todo;
-              })
-            );
-            //setEdit(null);
+            setTodo(newTodo);
+            setEdit(null);
           }}
         />
         <TodoFooter
